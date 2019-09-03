@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from  './login/login.component';
 import { AppComponent } from './app.component';
-import { AdminGuard } from  './login/login.guard';
+import { LoginGuard } from  './login/login.guard';
+import { InternalGuard } from  './login/guard/internal.guard';
 import { HeaderComponent } from './header/header.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { RegisterComponent } from './login/register/register.component';
@@ -12,43 +13,47 @@ import { VerifyEmailComponent } from './login/verify-email/verify-email.componen
 const routes: Routes = [
   {
     path:  '',
-    component:  AppComponent,
+    redirectTo: '/login', pathMatch: 'full'
+  },
 
-    children: [
-      // [...]
+    
       
       {
         path: 'header',
         component: HeaderComponent,
-        canActivate: [AdminGuard]
+        canActivate: [LoginGuard]
       },          
     {
         path: 'place-order',
         component: PlaceOrderComponent,
-        canActivate: [AdminGuard]
+        canActivate: [LoginGuard]
     },  
     {
         path: 'register',
         component: RegisterComponent,
+        canActivate: [InternalGuard]
     },
     {
         path: 'forgot-password',
         component: ForgotPasswordComponent,
+        canActivate: [InternalGuard]
     },
     {
         path: 'verify-email',
         component: VerifyEmailComponent,
+        canActivate: [InternalGuard]
     },
     
     { 
         path: 'login', 
-        component: LoginComponent 
+        component: LoginComponent,
+        canActivate: [InternalGuard]
     }
-    ],
+    ,
+]
   
   
-  }
-];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,12 +1,12 @@
-<div class="container pt-3">
+<!--<div class="container pt-3">
   <div class="row justify-content-sm-center">
     <div class="col-sm-10 col-md-6">
       <div class="card border-info">
         <div class="card-header">Login</div>
         <div class="card-body">
           <div class="row">
-            <div class="col-md-4 text-center">
-              <!--<img src="https://placeimg.com/128/128/nature">-->
+            <div class="col-md-4 text-center"> -->
+              <!--<img src="https://placeimg.com/128/128/nature">--> <!--
             </div>
             <div class="col-md-12">
 
@@ -19,5 +19,49 @@
         </div>
       </div>
     </div>
+  </div>
+</div> 
+-->
+
+
+<div class="displayTable text-light">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>Sign In</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+      </div>
+
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <input type="button" class="btn btn-primary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+
+      <!-- Calling GoogleAuth Api from AuthService -->
+      <div class="formGroup text-light">
+        <button type="button" class="btn btn-google" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Log in with Google
+        </button>
+      </div>
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Forgot Password?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/register"> Sign Up</span></span>
+    </div>
+
   </div>
 </div>

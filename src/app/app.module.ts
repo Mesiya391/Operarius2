@@ -28,7 +28,7 @@ import { VerifyEmailComponent } from './login/verify-email/verify-email.componen
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase, 'Operarius2'),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, 
     AngularFireAuthModule, 
     AppRoutingModule
