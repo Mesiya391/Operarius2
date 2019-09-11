@@ -9,15 +9,18 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
+import { AddOfferComponent } from './offers/add-offer/add-offer.component';
+import { EditOfferComponent } from './offers/edit-offer/edit-offer.component';
+import { OfferListComponent } from './offers/offer-list/offer-list.component'
 
 const routes: Routes = [
   {
     path:  '',
     redirectTo: '/login', pathMatch: 'full'
   },
-
-    
-      
+  { path: 'add-offer', component: AddOfferComponent, canActivate: [LoginGuard] },
+  { path: 'edit-offer/:id', component: EditOfferComponent, canActivate: [LoginGuard] },
+  { path: 'offers-list', component: OfferListComponent },
       {
         path: 'header',
         component: HeaderComponent,

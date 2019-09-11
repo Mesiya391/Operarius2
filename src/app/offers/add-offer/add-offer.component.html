@@ -1,0 +1,78 @@
+ <!-- Title group  -->
+ <div class="title-group">
+  <h1 class="mat-h1">Add Offer</h1>
+  <mat-divider fxFlex="1 0"></mat-divider>
+</div>
+
+<!-- Offer form -->
+<div class="inner-wrapper">
+  <form [formGroup]="offerForm" (ngSubmit)="submitOffer()"  #resetOfferForm="ngForm" >
+    <!-- Left block -->
+    <mat-card>
+      <div class="controlers-wrapper">
+        <!-- Offer title -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="title" formControlName="title" minlength="10">
+          <mat-error *ngIf="handleError('title', 'required')">
+            You must provide a<strong>offer title</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Description -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="description" formControlName="description" minlength="10">
+          <mat-error *ngIf="handleError('description', 'required')">
+            You must provide a <strong>description</strong>
+          </mat-error>
+          
+        </mat-form-field>
+
+        <!-- Estimated price -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="estimated_price" formControlName="estimated_price">
+          <mat-error *ngIf="handleError('estimated_price', 'required')">
+            You must provide an <strong>estimated_price</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Location -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="location" formControlName="location">
+          <mat-error *ngIf="handleError('location', 'required')">
+            You must provide an <strong>Location</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Contact number -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="contact_number" formControlName="contact_number" pattern="[0-9]*" minlength="9" maxlength="12">
+          <mat-error *ngIf="handleError('contact_number', 'required')">
+            You must provide an <strong>contact number</strong>
+          </mat-error>
+          <mat-error *ngIf="handleError('contact_number', 'minlength')">
+            Your <strong>contact number</strong> must be at least 9 digit
+          </mat-error>
+          <mat-error *ngIf="handleError('contact_number', 'maxlength')">
+            Your <strong>contact number</strong> cannot be longer than 12 digit
+          </mat-error>
+          <mat-error *ngIf="handleError('contact_number', 'pattern')">
+            Only numbers are allowed
+          </mat-error>
+        </mat-form-field>
+      </div>
+      </mat-card>
+       
+
+    <!-- Submit & Reset -->
+    <mat-card>
+      <div class="full-wrapper button-wrapper">
+        <div class="button-wrapper">
+          <button mat-flat-button color="warn">Submit</button>
+          <button mat-flat-button color="war" (click)="resetForm()">Clear</button>
+        </div>
+      </div>
+  </mat-card>
+  </form>
+  </div>
+  
+  
