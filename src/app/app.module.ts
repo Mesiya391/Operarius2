@@ -14,6 +14,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { VerifyEmailComponent } from './login/verify-email/verify-email.componen
     PlaceOrderComponent,
     RegisterComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

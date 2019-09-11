@@ -1,10 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-@import "./resources/bootstrap-social-gh-pages/bootstrap-social.css";
-
-@import "./resources/bootstrap-social-gh-pages/assets/css/font-awesome.css";
-
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(src\resources\img\cover.jpg);
     background-size: cover;
 }
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(src\resources\img\cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  } 
+
+app-root {
+  min-height: 100%;
+  width: 100%;
+  margin-bottom: -271px;
+  display: table;
+}
+
+router-outlet, app-footer{
+  display: table-row;
+}
+
+router-outlet {
+  position: absolute;
+}
+
+ app-footer {
+  height: 271px;
+} 
