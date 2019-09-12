@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from  './login/login.component';
-import { AppComponent } from './app.component';
 import { LoginGuard } from  './login/login.guard';
 import { InternalGuard } from  './login/guard/internal.guard';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +12,12 @@ import { AddOfferComponent } from './offers/add-offer/add-offer.component';
 import { EditOfferComponent } from './offers/edit-offer/edit-offer.component';
 import { OfferListComponent } from './offers/offer-list/offer-list.component'
 
+import { FaqComponent} from './faq/faq.component';
+import { AboutComponent} from './about/about.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 const routes: Routes = [
   {
     path:  '',
@@ -23,14 +28,38 @@ const routes: Routes = [
   { path: 'offers-list', component: OfferListComponent },
       {
         path: 'header',
-        component: HeaderComponent,
+        redirectTo: '/home', pathMatch: 'full'
+      },
+      {
+        path: 'navbar',
+        component: NavbarComponent,
         canActivate: [LoginGuard]
-      },          
+      },
+      {
+        path: 'home',
+        component: HomePageComponent,
+        canActivate: [LoginGuard]
+      },
     {
         path: 'place-order',
         component: PlaceOrderComponent,
         canActivate: [LoginGuard]
-    },  
+    },
+    {
+        path: 'faq',
+        component: FaqComponent,
+        canActivate: [LoginGuard]
+    },
+    {
+        path: 'about',
+        component: AboutComponent,
+        canActivate: [LoginGuard]
+    },
+    {
+        path: 'profile',
+        component: HeaderComponent,
+        canActivate: [LoginGuard]
+    },
     {
         path: 'register',
         component: RegisterComponent,
@@ -46,17 +75,13 @@ const routes: Routes = [
         component: VerifyEmailComponent,
         canActivate: [InternalGuard]
     },
-    
-    { 
-        path: 'login', 
+    {
+        path: 'login',
         component: LoginComponent,
         canActivate: [InternalGuard]
     }
     ,
 ]
-  
-  
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

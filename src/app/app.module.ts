@@ -24,6 +24,12 @@ import{ HttpClientModule } from '@angular/common/http';
 import { OfferService } from './../../../Operarius2/src/app/shared/offer.service';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { FaqComponent } from './faq/faq.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutComponent } from './about/about.component';
+
 
 
 @NgModule({
@@ -52,6 +58,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     BrowserModule
+    NavbarComponent,
+    FaqComponent,
+    HomePageComponent,
+    AboutComponent,
+
+  ],
+  imports: [
+    BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AppRoutingModule,
   ],
   providers: [OfferService],
   bootstrap: [AppComponent],

@@ -1,0 +1,35 @@
+div{
+    background-color: #333333;
+}
+
+div::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    float: left;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;   
+}
+
+li{
+    display: inline-block;
+    margin-left: 70px;
+    padding: 10px 5px;
+    font-family: 'Lacquer', sans-serif;
+}
+
+a{
+    color: #e6e6e6;
+    text-decoration: none;
+}
+
+li:hover{
+    background-color: #666666;
+}

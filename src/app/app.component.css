@@ -44,6 +44,8 @@ body{margin:0;font-family:Roboto, "Helvetica Neue", sans-serif;}
 
 h1{
     color: white;
+    font-family: 'Lacquer', sans-serif;
+    padding: 3em;
     text-align: left;
 }
 h2{
