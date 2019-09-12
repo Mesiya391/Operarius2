@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './login/forgot-password/forgot-password
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
 
 import { FaqComponent} from './faq/faq.component';
+import { AboutComponent} from './about/about.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -41,6 +42,11 @@ const routes: Routes = [
     {
         path: 'faq',
         component: FaqComponent,
+        canActivate: [LoginGuard]
+    },
+    {
+        path: 'about',
+        component: AboutComponent,
         canActivate: [LoginGuard]
     },
     {
