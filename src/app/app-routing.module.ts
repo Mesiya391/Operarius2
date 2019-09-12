@@ -21,8 +21,7 @@ const routes: Routes = [
   },
       {
         path: 'header',
-        component: HeaderComponent,
-        canActivate: [LoginGuard]
+        redirectTo: '/home', pathMatch: 'full'
       },
       {
         path: 'navbar',
