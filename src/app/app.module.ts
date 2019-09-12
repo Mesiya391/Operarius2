@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { FaqComponent } from './faq/faq.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -33,6 +34,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     NavbarComponent,
     FaqComponent,
     HomePageComponent,
+    AboutComponent,
 
   ],
   imports: [
