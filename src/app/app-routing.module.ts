@@ -8,6 +8,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
+
 import { FaqComponent} from './faq/faq.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
@@ -41,6 +42,11 @@ const routes: Routes = [
     {
         path: 'faq',
         component: FaqComponent,
+        canActivate: [LoginGuard]
+    },
+    {
+        path: 'profile',
+        component: HeaderComponent,
         canActivate: [LoginGuard]
     },
     {
