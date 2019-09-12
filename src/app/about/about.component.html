@@ -1,8 +1,15 @@
-
-  <div class="container">
+<style>
+p span div{
+  color:white
+}
+a {
+  color: yellow;
+}
+</style>
+  <div class="container" style="color: white">
     <div class="row row-30">
       <div class="col-md-4 col-xl-5">
-        <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+        <div class="pr-xl-4"><a class="brand" [routerLink]="['/home']" routerLinkActive="active"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
           <p>Operarius - connects drivers with doctors of their cars.</p>
           <!-- Rights-->
           <p class="rights">&copy; {{year}}<span ></span><span> Cracow University of Economics, </span><span>Operarius</span><span>. </span>
@@ -37,7 +44,7 @@
       </div>
     </div>
   </div>
-  <div class="row no-gutters social-container">
+  <div>
     <div class="col"><a class="social-inner" href="https://www.facebook.com/"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
     <div class="col"><a class="social-inner" href="https://www.instragram.com/"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
     <div class="col"><a class="social-inner" href="https://www.twitter.com/"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
