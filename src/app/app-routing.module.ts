@@ -9,6 +9,8 @@ import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
 import { FaqComponent} from './faq/faq.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Routes = [
@@ -24,6 +26,11 @@ const routes: Routes = [
       {
         path: 'navbar',
         component: NavbarComponent,
+        canActivate: [LoginGuard]
+      },
+      {
+        path: 'home',
+        component: HomePageComponent,
         canActivate: [LoginGuard]
       },
     {

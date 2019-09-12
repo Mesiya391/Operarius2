@@ -14,9 +14,10 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ForgotPasswordComponent } from './login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './login/verify-email/verify-email.component';
-
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FaqComponent } from './faq/faq.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FaqComponent } from './faq/faq.component';
     VerifyEmailComponent,
     NavbarComponent,
     FaqComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
