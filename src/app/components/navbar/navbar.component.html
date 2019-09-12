@@ -1,12 +1,12 @@
 <div>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
       <li><a href="#">Offers</a></li>
-      <li><a href="/header">Profile</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li><a [routerLink]="['/profile']" routerLinkActive="active">Profile</a></li>
+      <li><a [routerLink]="['/faq']" routerLinkActive="active">FAQ</a></li>
       <li  *ngIf="authService.isLoggedIn">
-        <a href='login' (click)="authService.SignOut()">
+        <a href='login' style='color:white' (click)="authService.SignOut()">
          Log out
         </a>
       </li>
